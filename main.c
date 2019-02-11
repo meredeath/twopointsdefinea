@@ -25,4 +25,5 @@ int main() {
 
   //display(s);
   save_extension(s, "lines.png");
+  printf("lines.png\n");
 }
