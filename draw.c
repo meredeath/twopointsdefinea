@@ -19,11 +19,13 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
   }else{
     m = 0;
   }
+  //printf("m is: %d\n",m);
   
   //if it's in octant 1 or 5:
-  if(0 <= m || m <= 1){
+  if(0 <= m && m <= 1){
     while(x <= x1){
       plot(s,c,x,y);
+      //printf("successfully plotted octant 1 line\n");
       if(d > 0){
 	y++;
 	d += 2*b;
@@ -62,7 +64,7 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
   }
   
   //if it's in octant 4 or 8:
-  if(0 > m || m >= -1){
+  if(0 > m && m >= -1){
     d = 2*a - b;
     while (x <= x1){
       plot(s,c,x,y);

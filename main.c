@@ -19,8 +19,8 @@ int main() {
 
   int counter= 0;
   for(int i = 0; i < 500; i++){
-    draw_line(250,250,250,250+counter,s,c);
-    counter++;
+    draw_line(250,250,400,250+counter,s,c);
+    counter += 10;
   }
 
   //display(s);
